@@ -202,7 +202,9 @@ body {
     background-color: #2a2f36;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    height: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .game-card:hover {
@@ -211,7 +213,7 @@ body {
 
 .game-image {
     position: relative;
-    aspect-ratio: 16/9;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -226,6 +228,17 @@ body {
     transform: scale(1.1);
 }
 
+.game-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--color-accent);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
+
 .game-info {
     padding: 1.5rem;
     background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%);
@@ -234,14 +247,33 @@ body {
     width: 100%;
 }
 
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
 .game-info h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    color: var(--color-light);
+    margin: 0;
+}
+
+.game-rating {
+    color: var(--color-accent);
+    font-weight: bold;
 }
 
 .game-info p {
     color: var(--color-gray);
     margin-bottom: 1rem;
+}
+
+.game-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .platform-icons {
@@ -250,22 +282,35 @@ body {
     color: var(--color-accent);
 }
 
-/* Download Section */
-.download-section {
+.game-genre {
+    color: var(--color-gray);
+    font-size: 0.875rem;
+}
+
+/* Newsletter Section */
+.newsletter-section {
     padding: 5rem 0;
     background: linear-gradient(45deg, var(--color-secondary), var(--color-accent));
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.download-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-.download-section p {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    color: rgba(255, 255, 255, 0.9);
+.newsletter-form input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
 }
 
 /* Footer */
@@ -357,6 +402,10 @@ body {
 
     .hero h1 {
         font-size: 2.5rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
     }
 }
 
