@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos Jeux - GameVerse</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="logo">GameVerse</a>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Accueil</a>
+          <a href="jeux.html" class="nav-link active">Jeux</a>
+          <a href="equipe.html" class="nav-link">Équipe</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <button class="mobile-menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Games Header -->
+    <section class="page-header games-header">
+      <div class="container">
+        <h1>Catalogue de Jeux</h1>
+        <p>Découvrez notre sélection des meilleurs jeux du moment</p>
+      </div>
+    </section>
+
+    <!-- Games Filter -->
+    <section class="games-filter">
+      <div class="container">
+        <div class="filter-container">
+          <div class="search-box">
+            <i data-lucide="search"></i>
+            <input type="text" placeholder="Rechercher un jeu..." />
+          </div>
+          <div class="filter-options">
+            <select class="filter-select">
+              <option value="">Toutes les plateformes</option>
+              <option value="pc">PC</option>
+              <option value="console">Console</option>
+              <option value="mobile">Mobile</option>
+            </select>
+            <select class="filter-select">
+              <option value="">Tous les genres</option>
+              <option value="fps">FPS</option>
+              <option value="rpg">RPG</option>
+              <option value="action">Action</option>
+              <option value="aventure">Aventure</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section class="games-catalog">
+      <div class="container">
+        <h2 class="section-title">Jeux à la Une</h2>
+        <div class="games-grid">
+          <!-- Valorant -->
+          <a href="valorant.html" class="game-card">
+            <div class="game-image">
+              <img src="/api/placeholder/400/225" alt="Valorant" />
+              <div class="game-badge">Populaire</div>
+            </div>
+            <div class="game-info">
+              <div class="game-header">
+                <h3>Valorant</h3>
+                <span class="game-rating">4.8 ★</span>
+              </div>
+              <p>FPS tactique 5v5 par Riot Games</p>
+              <div class="game-meta">
+                <div class="platform-icons">
+                  <i data-lucide="monitor"></i>
+                </div>
+                <span class="game-genre">FPS Tactique</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Call of Duty -->
+          <a href="cod.html" class="game-card">
+            <div class="game-image">
+              <img src="/api/placeholder/400/225" alt="Call of Duty" />
+              <div class="game-badge">Nouveau</div>
+            </div>
+            <div class="game-info">
+              <div class="game-header">
+                <h3>Call of Duty: Modern Warfare III</h3>
+                <span class="game-rating">4.5 ★</span>
+              </div>
+              <p>Une expérience FPS moderne et immersive</p>
+              <div class="game-meta">
+                <div class="platform-icons">
+                  <i data-lucide="monitor"></i>
+                  <i data-lucide="gamepad-2"></i>
+                </div>
+                <span class="game-genre">FPS</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- God of War -->
+          <a href="god-of-war.html" class="game-card">
+            <div class="game-image">
+              <img src="/api/placeholder/400/225" alt="God of War" />
+              <div class="game-badge">Exclusif</div>
+            </div>
+            <div class="game-info">
+              <div class="game-header">
+                <h3>God of War Ragnarök</h3>
+                <span class="game-rating">4.9 ★</span>
+              </div>
+              <p>L'épopée nordique continue</p>
+              <div class="game-meta">
+                <div class="platform-icons">
+                  <i data-lucide="gamepad-2"></i>
+                </div>
+                <span class="game-genre">Action/Aventure</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- GTA 5 -->
+          <a href="gta5.html" class="game-card">
+            <div class="game-image">
+              <img src="/api/placeholder/400/225" alt="GTA 5" />
+              <div class="game-badge">Classique</div>
+            </div>
+            <div class="game-info">
+              <div class="game-header">
+                <h3>Grand Theft Auto V</h3>
+                <span class="game-rating">4.7 ★</span>
+              </div>
+              <p>L'aventure urbaine ultime</p>
+              <div class="game-meta">
+                <div class="platform-icons">
+                  <i data-lucide="monitor"></i>
+                  <i data-lucide="gamepad-2"></i>
+                </div>
+                <span class="game-genre">Action/Aventure</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Zelda -->
+          <a href="zelda.html" class="game-card">
+            <div class="game-image">
+              <img src="/api/placeholder/400/225" alt="Zelda" />
+              <div class="game-badge">Chef d'œuvre</div>
+            </div>
+            <div class="game-info">
+              <div class="game-header">
+                <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                <span class="game-rating">5.0 ★</span>
+              </div>
+              <p>Une nouvelle aventure épique à Hyrule</p>
+              <div class="game-meta">
+                <div class="platform-icons">
+                  <i data-lucide="gamepad-2"></i>
+                </div>
+                <span class="game-genre">Action/RPG</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Restez informé</h2>
+          <p>
+            Abonnez-vous à notre newsletter pour recevoir les dernières
+            actualités gaming
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Votre adresse email" />
+            <button type="submit" class="btn btn-primary">S'abonner</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>À propos</h3>
+            <p>
+              Projet étudiant dédié à l'actualité gaming et au partage de
+              passion pour les jeux vidéo.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Liens utiles</h3>
+            <ul>
+              <li><a href="index.html">Offres d'emploi</a></li>
+              <li><a href="equipe.html">À propos de nous</a></li>
+              <li><a href="contact.html">Nous contacter</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Suivez-nous</h3>
+            <div class="social-icons">
+              <a href="#"><i data-lucide="facebook"></i></a>
+              <a href="#"><i data-lucide="twitter"></i></a>
+              <a href="#"><i data-lucide="instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 GameVerse. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
