@@ -1,14 +1,26 @@
+<!-- 
+  Projet : Site Web Valorant - Projet Étudiant
+  Description : Page de présentation du jeu Valorant
+  Auteur : [Ton nom]
+  Date : 2024
+-->
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <!-- Métadonnées de base -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Valorant - GameVerse</title>
+
+    <!-- Feuilles de style -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="valorant.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
   </head>
+
   <body>
-    <!-- Navigation -->
+    <!-- SECTION 1: NAVIGATION -->
     <nav class="navbar">
       <div class="navbar-container">
         <a href="index.html" class="logo">GameVerse</a>
@@ -24,44 +36,27 @@
       </div>
     </nav>
 
-    <!-- Game Hero Section -->
-    <section class="game-hero">
-      <div class="game-hero-bg">
-        <img src="/api/placeholder/1920/600" alt="Valorant Background" />
-      </div>
+    <!-- SECTION 2: VIDÉO BANNIÈRE -->
+    <section class="game-video">
       <div class="container">
-        <div class="game-hero-content">
-          <div class="game-title-section">
-            <h1>Valorant</h1>
-            <div class="game-meta-info">
-              <span class="game-rating">
-                <i data-lucide="star"></i>
-                4.8/5
-              </span>
-              <span class="game-genre">FPS Tactique</span>
-              <span class="game-release">2020</span>
-            </div>
-          </div>
-          <div class="game-actions">
-            <a href="#" class="btn btn-primary">
-              <i data-lucide="download"></i>
-              Télécharger
-            </a>
-            <a href="#" class="btn btn-secondary">
-              <i data-lucide="heart"></i>
-              Ajouter aux favoris
-            </a>
-          </div>
+        <div class="video-wrapper">
+          <video autoplay muted loop playsinline id="gameVideo">
+            <source src="Untouchable - Valorant Edit.mp4" type="video/mp4" />
+          </video>
+          <button class="sound-toggle" id="soundToggle">
+            <i data-lucide="volume-x" id="soundIcon"></i>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Game Content -->
+    <!-- SECTION 3: CONTENU PRINCIPAL -->
     <section class="game-content">
       <div class="container">
         <div class="game-grid">
-          <!-- Main Content -->
+          <!-- Zone principale -->
           <div class="game-main">
+            <!-- Description du jeu -->
             <div class="game-description">
               <h2>Description</h2>
               <p>
@@ -72,6 +67,7 @@
               </p>
             </div>
 
+            <!-- Caractéristiques du jeu -->
             <div class="game-features">
               <h2>Caractéristiques principales</h2>
               <ul class="features-list">
@@ -108,7 +104,240 @@
               </ul>
             </div>
 
-            <!-- Gallery -->
+            <!-- Tableau des agents -->
+            <div class="agents-section">
+              <h2>Agents Principaux</h2>
+              <div class="agents-table-container">
+                <table class="agents-table">
+                  <thead>
+                    <tr>
+                      <th>Agent</th>
+                      <th>Rôle</th>
+                      <th>Capacité Signature</th>
+                      <th>Ultimate</th>
+                      <th>Difficulté</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Jett -->
+                    <tr>
+                      <td>
+                        <div class="agent-info">
+                          <img src="jett.jpg" alt="Jett" class="agent-avatar" />
+                          <span>Jett</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="role duelist">Duelliste</span>
+                      </td>
+                      <td>Tailwind (Dash rapide)</td>
+                      <td>Blade Storm</td>
+                      <td>
+                        <div class="difficulty">
+                          <i data-lucide="star" class="filled"></i>
+                          <i data-lucide="star" class="filled"></i>
+                          <i data-lucide="star"></i>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- Phoenix -->
+                    <tr>
+                      <td>
+                        <div class="agent-info">
+                          <img
+                            src="phoenix.jpg"
+                            alt="Phoenix"
+                            class="agent-avatar"
+                          />
+                          <span>Phoenix</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="role duelist">Duelliste</span>
+                      </td>
+                      <td>Hot Hands (Boule de feu)</td>
+                      <td>Run it Back</td>
+                      <td>
+                        <div class="difficulty">
+                          <i data-lucide="star" class="filled"></i>
+                          <i data-lucide="star"></i>
+                          <i data-lucide="star"></i>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- Chamber -->
+                    <tr>
+                      <td>
+                        <div class="agent-info">
+                          <img
+                            src="chamber.jpg"
+                            alt="Chamber"
+                            class="agent-avatar"
+                          />
+                          <span>Chamber</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="role sentinel">Sentinelle</span>
+                      </td>
+                      <td>Headhunter (Pistolet)</td>
+                      <td>Tour De Force</td>
+                      <td>
+                        <div class="difficulty">
+                          <i data-lucide="star" class="filled"></i>
+                          <i data-lucide="star" class="filled"></i>
+                          <i data-lucide="star"></i>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- Viper -->
+                    <tr>
+                      <td>
+                        <div class="agent-info">
+                          <img
+                            src="viper.jpg"
+                            alt="Viper"
+                            class="agent-avatar"
+                          />
+                          <span>Viper</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="role controller">Contrôleur</span>
+                      </td>
+                      <td>Mur toxique</td>
+                      <td>Nid de vipères</td>
+                      <td>
+                        <div class="difficulty">
+                          <i data-lucide="star" class="filled"></i>
+                          <i data-lucide="star" class="filled"></i>
+                          <i data-lucide="star" class="filled"></i>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- Fade -->
+                    <tr>
+                      <td>
+                        <div class="agent-info">
+                          <img src="fade.jpg" alt="Fade" class="agent-avatar" />
+                          <span>Fade</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="role initiator">Initiateur</span>
+                      </td>
+                      <td>Seize (Œil)</td>
+                      <td>Nightfall</td>
+                      <td>
+                        <div class="difficulty">
+                          <i data-lucide="star" class="filled"></i>
+                          <i data-lucide="star" class="filled"></i>
+                          <i data-lucide="star" class="filled"></i>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Comparaison de Maps - Carrousel -->
+            <div class="map-carousel-section">
+              <h2>Cartes de Valorant</h2>
+              <div class="carousel-container">
+                <div class="carousel">
+                  <div class="carousel-item">
+                    <img src="map1.jpg" alt="Map 1" />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="map2.jpg" alt="Map 2" />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="map3.jpg" alt="Map 3" />
+                  </div>
+                </div>
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+              </div>
+            </div>
+            <!-- SECTION TOURNOI -->
+            <section class="tournament-section">
+              <div class="container">
+                <h2>Tournoi Valorant -</h2>
+                <p>
+                  Bienvenue dans notre tournoi de Valorant ! Huit équipes
+                  s'affrontent dans des matchs épiques pour remporter le titre
+                  de champions virtuels. Découvrez les équipes et suivez leur
+                  progression.
+                </p>
+
+                <div class="tournament-matches">
+                  <div class="match">
+                    <!-- Équipe 1 -->
+                    <div class="team-card">
+                      <img src="ea.jpeg" alt="Équipe Alpha" class="team-logo" />
+                      <h3>Équipe Alpha</h3>
+                      <p>
+                        Une équipe audacieuse avec une stratégie axée sur
+                        l'offensive.
+                      </p>
+                    </div>
+
+                    <!-- VS -->
+                    <div class="vs">
+                      <span>VS</span>
+                    </div>
+
+                    <!-- Équipe 2 -->
+                    <div class="team-card">
+                      <img
+                        src="ea2.jpeg"
+                        alt="Équipe Bravo"
+                        class="team-logo"
+                      />
+                      <h3>Équipe Bravo</h3>
+                      <p>
+                        Connu pour ses tactiques défensives et ses mouvements
+                        calculés.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="match">
+                    <!-- Équipe 3 -->
+                    <div class="team-card">
+                      <img
+                        src="ea3.jpeg"
+                        alt="Équipe Charlie"
+                        class="team-logo"
+                      />
+                      <h3>Équipe Charlie</h3>
+                      <p>Un mélange parfait de talent et de coordination.</p>
+                    </div>
+
+                    <!-- VS -->
+                    <div class="vs">
+                      <span>VS</span>
+                    </div>
+
+                    <!-- Équipe 4 -->
+                    <div class="team-card">
+                      <img
+                        src="ea4.jpeg"
+                        alt="Équipe Delta"
+                        class="team-logo"
+                      />
+                      <h3>Équipe Delta</h3>
+                      <p>
+                        Les maîtres des cartes tactiques, imprévisibles à chaque
+                        tour.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Galerie d'images -->
             <div class="game-gallery">
               <h2>Galerie</h2>
               <div class="gallery-grid">
@@ -121,7 +350,7 @@
               </div>
             </div>
 
-            <!-- System Requirements -->
+            <!-- Configuration requise -->
             <div class="system-requirements">
               <h2>Configuration requise</h2>
               <div class="requirements-grid">
@@ -147,37 +376,25 @@
             </div>
           </div>
 
-          <!-- Sidebar -->
+          <!-- Barre latérale -->
           <div class="game-sidebar">
             <div class="game-info-card">
               <h3>Informations</h3>
               <ul class="game-info-list">
-                <li>
-                  <span>Développeur</span>
-                  <span>Riot Games</span>
-                </li>
-                <li>
-                  <span>Éditeur</span>
-                  <span>Riot Games</span>
-                </li>
-                <li>
-                  <span>Date de sortie</span>
-                  <span>2 juin 2020</span>
-                </li>
+                <li><span>Développeur</span><span>Riot Games</span></li>
+                <li><span>Éditeur</span><span>Riot Games</span></li>
+                <li><span>Date de sortie</span><span>2 juin 2020</span></li>
                 <li>
                   <span>Plateformes</span>
                   <div class="platform-icons">
                     <i data-lucide="monitor"></i>
                   </div>
                 </li>
-                <li>
-                  <span>Langues</span>
-                  <span>Multi-langues</span>
-                </li>
+                <li><span>Langues</span><span>Multi-langues</span></li>
               </ul>
             </div>
 
-            <!-- Similar Games -->
+            <!-- Jeux similaires -->
             <div class="similar-games">
               <h3>Jeux similaires</h3>
               <div class="similar-games-list">
@@ -195,7 +412,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- SECTION 4: PIED DE PAGE -->
     <footer class="footer">
       <div class="container">
         <div class="footer-grid">
@@ -228,9 +445,54 @@
         </div>
       </div>
     </footer>
-
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".carousel");
+        const items = document.querySelectorAll(".carousel-item");
+        const prevButton = document.querySelector(".carousel-button.prev");
+        const nextButton = document.querySelector(".carousel-button.next");
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+          const offset = -currentIndex * 100; // Déplace la position du carrousel
+          carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevButton.addEventListener("click", function () {
+          currentIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
+          updateCarousel();
+        });
+
+        nextButton.addEventListener("click", function () {
+          currentIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
+          updateCarousel();
+        });
+      });
+    </script>
+
+    <!-- Scripts -->
+    <script>
+      // Initialisation des icônes
       lucide.createIcons();
+
+      // Gestion du son de la vidéo
+      document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("gameVideo");
+        const soundToggle = document.getElementById("soundToggle");
+        const soundIcon = document.getElementById("soundIcon");
+
+        soundToggle.addEventListener("click", function () {
+          if (video.muted) {
+            video.muted = false;
+            soundIcon.setAttribute("data-lucide", "volume-2");
+          } else {
+            video.muted = true;
+            soundIcon.setAttribute("data-lucide", "volume-x");
+          }
+          lucide.createIcons();
+        });
+      });
     </script>
   </body>
 </html>

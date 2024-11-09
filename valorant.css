@@ -1,0 +1,460 @@
+/*
+  Projet Valorant - GameVerse
+  CSS Complet
+  2024
+*/
+
+/* ========== VARIABLES ET RESET ========== */
+:root {
+    /* Couleurs principales */
+    --primary-color: #ff4655;
+    --secondary-color: #0f1923;
+    --accent-color: #ece8e1;
+    --text-color: #ffffff;
+    --background-dark: #1f2326;
+  
+    /* Couleurs des rôles */
+    --duelist-color: #ff4655;
+    --sentinel-color: #00ffaa;
+    --initiator-color: #ffc400;
+    --controller-color: #4a90e2;
+  
+    /* Animations */
+    --transition-speed: 0.3s;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* ========== NAVIGATION ========== */
+  .navbar {
+    background-color: rgba(15, 25, 35, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 70, 85, 0.2);
+    box-shadow: 0 2px 20px rgba(255, 70, 85, 0.1);
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 70, 85, 0.3);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed);
+    box-shadow: 0 0 10px rgba(255, 70, 85, 0.5);
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* ========== SECTION VIDÉO ========== */
+  .game-video {
+    position: relative;
+    padding: 4rem 0;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 70, 85, 0.2);
+  }
+  
+  .video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(255, 70, 85, 0.2);
+  }
+  
+  .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+  }
+  
+  .sound-toggle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 70, 85, 0.3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+  
+  .sound-toggle:hover {
+    background: rgba(255, 70, 85, 0.8);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 70, 85, 0.5);
+  }
+/* Style amélioré de la section agents */
+.agents-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 70, 85, 0.1) 0%, rgba(15, 25, 35, 0.2) 100%);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 70, 85, 0.2);
+  }
+  
+  .agents-section h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(255, 70, 85, 0.3);
+  }
+  
+  .agents-table-container {
+    overflow-x: auto;
+    margin-top: 2rem;
+    background: rgba(15, 25, 35, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 70, 85, 0.1);
+    border: 1px solid rgba(255, 70, 85, 0.1);
+  }
+  
+  .agents-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .agents-table th {
+    background-color: rgba(255, 70, 85, 0.15);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    padding: 1.5rem;
+    text-align: left;
+  }
+  
+  .agents-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 70, 85, 0.1);
+  }
+  
+  .agents-table tr:hover {
+    background: rgba(255, 70, 85, 0.05);
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .agent-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .agent-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 70, 85, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .agent-info:hover .agent-avatar {
+    transform: scale(1.1);
+    border-color: #fff;
+  }
+  
+  .role {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles des rôles avec effets de lueur */
+  .duelist {
+    color: var(--duelist-color);
+    text-shadow: 0 0 10px rgba(255, 70, 85, 0.5);
+  }
+  
+  .sentinel {
+    color: var(--sentinel-color);
+    text-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+  }
+  
+  .initiator {
+    color: var(--initiator-color);
+    text-shadow: 0 0 10px rgba(255, 196, 0, 0.5);
+  }
+  
+  .controller {
+    color: var(--controller-color);
+    text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+  }
+  
+  .difficulty {
+    display: flex;
+    gap: 0.3rem;
+  }
+  
+  .difficulty i {
+    color: rgba(255, 255, 255, 0.2);
+    transition: color 0.3s ease;
+  }
+  
+  .difficulty i.filled {
+    color: var(--primary-color);
+    filter: drop-shadow(0 0 5px rgba(255, 70, 85, 0.5));
+  }
+  
+  /* Animation au survol des lignes */
+  .agents-table tr {
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .agents-table tr:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 70, 85, 0.5);
+  }
+
+  /* ========== CAROUSEL DE MAPS ========== */
+.map-carousel-section {
+    margin: 4rem 0;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 70, 85, 0.1), rgba(15, 25, 35, 0.2));
+    border-radius: 15px;
+    border: 1px solid rgba(255, 70, 85, 0.2);
+  }
+  
+  .map-carousel-section h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(255, 70, 85, 0.3);
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 70, 85, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 70, 85, 0.2);
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease;
+  }
+  
+  .carousel-button:hover {
+    background: rgba(255, 70, 85, 0.8);
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+ /* ========== SECTION TOURNOI ========== */
+.tournament-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(15, 25, 35, 0.8), rgba(255, 70, 85, 0.2));
+    border-radius: 15px;
+    border: 1px solid rgba(255, 70, 85, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 70, 85, 0.2);
+  }
+  
+  .tournament-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(255, 70, 85, 0.3);
+  }
+  
+  .tournament-section p {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Alignement des matchs */
+  .tournament-matches {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  /* Style des cartes d'équipe */
+  .team-card {
+    background: rgba(15, 25, 35, 0.9);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 70, 85, 0.2);
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(255, 70, 85, 0.1);
+    text-align: center;
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 70, 85, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(255, 70, 85, 0.3);
+  }
+  
+  .team-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  .team-card p {
+    color: var(--accent-color);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Style du VS */
+  .vs {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(255, 70, 85, 0.5);
+    flex-shrink: 0;
+  }
+  
